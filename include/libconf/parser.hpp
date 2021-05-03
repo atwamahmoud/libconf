@@ -42,7 +42,7 @@ class EnvFileParser : protected Parser {
         currentLine = "";
         continue;
       }
-      currentLine.push_back(this->rawString.at(i));
+      currentLine.push_back(currentChar);
     }
 
     // Split each line around '='
