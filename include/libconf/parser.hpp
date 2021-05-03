@@ -35,8 +35,9 @@ class EnvFileParser : protected Parser {
     std::vector<std::string> lines = std::vector<std::string>();
     std::string currentLine = "";
     // Get lines...
-    for (int i = 0; i < this->rawString.length(); i++) {
-      if (this->rawString.at(i) == '\n') {
+    // Perhabs, should combine both loops?
+    for (char currentChar: rawString) {
+      if (currentChar == '\n') {
         lines.push_back(currentLine);
         currentLine = "";
         continue;

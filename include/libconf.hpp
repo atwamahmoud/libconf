@@ -1,5 +1,6 @@
 #include "libconf/parser.hpp"
 #include <string>
+#include <unordered_map>
 
 namespace atwa {
 namespace libconf {
@@ -16,6 +17,9 @@ public:
   Libconf(ConfigSource source, std::string filename) {
     this->filename = filename;
     this->source = source;
+  }
+  void parse() {
+
   }
 };
 
